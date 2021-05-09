@@ -49,15 +49,18 @@ body {
 section.testimonials {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: repeat 4, 1fr;
-      grid-template-columns: repeat 4, 1fr;
-  -ms-grid-rows: repeat 2, 1fr;
-      grid-template-rows: repeat 2, 1fr;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (minmax(0, 1fr))[2];
+      grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 section.testimonials .review {
   padding: 24px;
   border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px rgba(73, 73, 73, 0.603);
+          box-shadow: 5px 5px 10px rgba(73, 73, 73, 0.603);
 }
 
 section.testimonials .review .profile {
@@ -88,11 +91,8 @@ section.testimonials .review .profile .info p.name {
 }
 
 section.testimonials .review:nth-child(1) {
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 1;
-  -ms-grid-column: 0;
-      grid-column-start: 0;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
   -ms-grid-column-span: 2;
       grid-column-end: span 2;
   background: var(--moderate-violet);
@@ -116,40 +116,33 @@ section.testimonials .review:nth-child(1) .description p {
 }
 
 section.testimonials .review:nth-child(2) {
+  background: var(--very-dark-grayish-blue);
   -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row: 1 / 1;
   -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 3;
-}
-
-section.testimonials .review:nth-child(3) {
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 2;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 1;
-}
-
-section.testimonials .review:nth-child(4) {
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 2;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  -ms-grid-column-span: 2;
-      grid-column-end: span 2;
+  grid-column: 3 / 3;
 }
 
 section.testimonials .review:nth-child(5) {
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  -ms-grid-row-span: 2;
-      grid-row-end: span 2;
   -ms-grid-column: 4;
       grid-column-start: 4;
-  grid-column-end: 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+section.testimonials .review:nth-child(4) {
+  background: var(--very-dark-blackish-blue);
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+}
+
+section.testimonials .review:nth-child(3) {
+  background: var(--white);
+  -ms-grid-row: 2;
+  grid-row: 2 / 2;
 }
 /*# sourceMappingURL=style.css.map */
