@@ -30,6 +30,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: var(--light-grayish-blue);
 }
 
 .attribution {
@@ -208,6 +209,7 @@ section.testimonials .review:nth-child(5) {
   -ms-grid-column: 8;
   -ms-grid-column-span: 3;
   grid-area: k;
+  background: var(--white);
   color: var(--very-dark-grayish-blue);
 }
 
